@@ -121,11 +121,13 @@ set enabled=yes primary-ntp=194.190.168.1 server-dns-names=0.ru.pool.ntp.org,1.r
 set auto-upgrade=yes
 
 # Обновляемся. Настоятельно рекомендую использовать только long-term ветку обновлений, меньше багов больше надежность.
+# Команды выполняем поочередно
 
 /system package update
 set channel=long-term
 check-for-updates
 download
+install
 
 # Обязательно перезагружаемся два раза
 
